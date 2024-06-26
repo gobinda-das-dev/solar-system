@@ -44,15 +44,15 @@ const camera = new THREE.PerspectiveCamera(
 );
 camera.position.set(100, 150, 200);
 
-planet_sun = loadPlanetTexture("img/sun_hd.jpg", 20, 100, 100, 'basic');
-planet_earth = loadPlanetTexture("img/earth_hd.jpg", 4, 100, 100, 'standard');
-planet_mercury = loadPlanetTexture("img/mercury_hd.jpg", 2, 100, 100, 'standard');
-planet_venus = loadPlanetTexture("img/venus_hd.jpg", 3, 100, 100, 'standard');
-planet_mars = loadPlanetTexture("img/mars_hd.jpg", 3.5, 100, 100, 'standard');
-planet_jupiter = loadPlanetTexture("img/jupiter_hd.jpg", 10, 100, 100, 'standard');
-planet_saturn = loadPlanetTexture("img/saturn_hd.jpg", 8, 100, 100, 'standard');
-planet_uranus = loadPlanetTexture("img/uranus_hd.jpg", 6, 100, 100, 'standard');
-planet_neptune = loadPlanetTexture("img/neptune_hd.jpg", 5, 100, 100, 'standard');
+planet_sun = loadPlanetTexture("/sun_hd.jpg", 20, 100, 100, 'basic');
+planet_earth = loadPlanetTexture("/earth_hd.jpg", 4, 100, 100, 'standard');
+planet_mercury = loadPlanetTexture("/mercury_hd.jpg", 2, 100, 100, 'standard');
+planet_venus = loadPlanetTexture("/venus_hd.jpg", 3, 100, 100, 'standard');
+planet_mars = loadPlanetTexture("/mars_hd.jpg", 3.5, 100, 100, 'standard');
+planet_jupiter = loadPlanetTexture("/jupiter_hd.jpg", 10, 100, 100, 'standard');
+planet_saturn = loadPlanetTexture("/saturn_hd.jpg", 8, 100, 100, 'standard');
+planet_uranus = loadPlanetTexture("/uranus_hd.jpg", 6, 100, 100, 'standard');
+planet_neptune = loadPlanetTexture("/neptune_hd.jpg", 5, 100, 100, 'standard');
 camera.lookAt(planet_sun);
 
 scene.add(planet_sun, planet_earth, planet_mercury, planet_venus, planet_mars, planet_jupiter, planet_saturn, planet_uranus, planet_neptune);
@@ -113,12 +113,12 @@ window.addEventListener('resize', () => {
 function loadSkybox() {
   const loader = new THREE.CubeTextureLoader();
   const skyboxImagepaths = [
-    'img/skybox/space_ft.png',
-    'img/skybox/space_bk.png',
-    'img/skybox/space_up.png',
-    'img/skybox/space_dn.png',
-    'img/skybox/space_rt.png',
-    'img/skybox/space_lf.png'
+    '/skybox/space_ft.png',
+    '/skybox/space_bk.png',
+    '/skybox/space_up.png',
+    '/skybox/space_dn.png',
+    '/skybox/space_rt.png',
+    '/skybox/space_lf.png'
   ];
   const skyboxTexture = loader.load(skyboxImagepaths);
   return skyboxTexture;
